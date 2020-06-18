@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { INFERRED_TYPE } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-list-titles',
@@ -6,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-titles.component.scss']
 })
 export class ListTitlesComponent implements OnInit {
+
+  @Input() title: string;
+
+  @Input() list = [];
 
   constructor() { }
 
